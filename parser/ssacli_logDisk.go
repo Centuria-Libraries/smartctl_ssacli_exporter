@@ -15,6 +15,7 @@ type SsacliLogDiskData struct {
 	Cylinders float64
 	Status    string
 	Caching   string
+	LDAccelerationMethod string
 	UID       string
 	LName     string
 	LID       string
@@ -48,6 +49,8 @@ func parseSsacliLogDisk(s string) *SsacliLogDisk {
 				tmp.Status = kv[1]
 			case "Caching":
 				tmp.Caching = kv[1]
+			case "LD Acceleration Method":
+				tmp.LDAccelerationMethod = kv[1]
 			case "Unique Identifier":
 				tmp.UID = kv[1]
 			case "Disk Name":

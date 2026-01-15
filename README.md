@@ -16,8 +16,10 @@ Export metric from HP enterprise raid card &amp; disk smartctl with auto detect 
 
 ### Build from source
 ``` Bash
-git clone https://github.com/jakubjastrabik/smartctl_ssacli_exporter.git
-go get
+git clone https://github.com/Centuria-Libraries/smartctl_ssacli_exporter
+cd smartctl_ssacli_exporter
+go mod init smartctl_ssacli_exporter
+go mod tidy
 go build
 ```
 
